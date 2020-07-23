@@ -5,8 +5,8 @@
 1. Clone repo
 1. Setup deno: `brew install deno`
 1. Run project: `deno run --allow-net --allow-read mod.ts`
-   - --allow-net required for serving over http
-   - --allow-read required for serving index.html static file
+   - `--allow-net` required for serving over http
+   - `--allow-read` required for serving index.html static file
    - `mod.ts` is the entry file
 
 ## Usage
