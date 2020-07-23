@@ -1,4 +1,4 @@
-import nanoid from "https://deno.land/x/nanoid/mod.ts"
+import nanoid from "https://deno.land/x/nanoid/mod.ts";
 
 interface Link {
   longLink: string;
@@ -11,14 +11,14 @@ export function addLink(longLink: string) {
   const shortCode = nanoid(4);
   const newLink: Link = {
     shortCode,
-    longLink
-  }
+    longLink,
+  };
 
   links.push(newLink);
 }
 
 export function getLink(shortCode: string): Link | null {
-  const link = links.find(link => link.shortCode === shortCode) ?? null;
+  const link = links.find((link) => link.shortCode === shortCode) ?? null;
   return link;
 }
 

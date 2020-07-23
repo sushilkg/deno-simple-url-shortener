@@ -1,11 +1,11 @@
-import * as log from "https://deno.land/std/log/mod.ts"
-import { Router } from "https://deno.land/x/oak/mod.ts"
-import * as links from "./models/links.ts"
+import * as log from "https://deno.land/std/log/mod.ts";
+import { Router } from "https://deno.land/x/oak/mod.ts";
+import * as links from "./models/links.ts";
 
 const router = new Router();
 
 router.get("/links", (context) => {
-  log.info('Getting all links');
+  log.info("Getting all links");
   context.response.body = links.getLinks();
 });
 
@@ -18,7 +18,7 @@ router.post("/links/add", async (context) => {
 
   links.addLink(newLink.url);
 
-  context.response.body = { success: true }
+  context.response.body = { success: true };
   context.response.status = 201;
 });
 
