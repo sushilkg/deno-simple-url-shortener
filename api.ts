@@ -1,5 +1,4 @@
-import * as log from "https://deno.land/std/log/mod.ts";
-import { Router } from "https://deno.land/x/oak/mod.ts";
+import { Router, log } from "./deps.ts";
 import * as links from "./models/links.ts";
 
 const router = new Router();

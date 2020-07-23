@@ -1,4 +1,4 @@
-import nanoid from "https://deno.land/x/nanoid/mod.ts";
+import { nanoid } from "../deps.ts";
 
 interface Link {
   longLink: string;
