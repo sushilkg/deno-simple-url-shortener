@@ -19,17 +19,17 @@ router.post("/links/add", async (context) => {
   links.addLink(newLink.url);
 
   context.response.body = { success: true }
-  context.response.headers.set('status', '201');
+  context.response.status = 201;
 });
 
 router.get("/:shortCode", async (context) => {
   const shortCode = context.params?.shortCode;
-  if (shortCode) {
-    log.info(`Requesting ${shortCode}`);
+  log.info(`Requesting ${shortCode}`);
 
+  if (shortCode) {
     const link = links.getLink(shortCode);
     if (link) {
-      context.response.headers.set('status', '301');
+      context.response.status = 301;
       context.response.redirect(link.longLink);
     } else {
       context.throw(404);
