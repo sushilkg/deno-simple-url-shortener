@@ -21,19 +21,6 @@ router.post("/links/add", async (context) => {
   context.response.status = 201;
 });
 
-router.get("/:shortCode", async (context) => {
-  const shortCode = context.params?.shortCode;
-  log.info(`Requesting ${shortCode}`);
-
-  if (shortCode) {
-    const link = links.getLink(shortCode);
-    if (link) {
-      context.response.status = 301;
-      context.response.redirect(link.longLink);
-    } else {
-      context.throw(404);
-    }
-  }
-});
+//Implement search link and redirect
 
 export default router;
