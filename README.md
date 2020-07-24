@@ -2,7 +2,7 @@
 
 ## Setup
 
-1. Clone repo `github.com/sushilgupta/deno-simple-url-shortener`
+1. Clone repo `git clone git@github.com:sushilgupta/deno-simple-url-shortener.git`
 1. Setup deno: `brew install deno`
 1. Run project: `deno run --allow-net --allow-read mod.ts`
    - `--allow-net` required for serving over http
